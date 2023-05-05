@@ -25,7 +25,7 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript project.
-Esta app corre un microservicio MQTT en un cliente NestJS que funciona como un cliente MQTT que puede recibir y publicar mensajes.
+<br>Esta app corre un microservicio MQTT en un cliente NestJS que funciona como un cliente MQTT que puede recibir y publicar mensajes.<br>
 
 ## Si copian el repo
 ```bash
