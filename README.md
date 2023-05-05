@@ -28,6 +28,7 @@
 <br>Esta app corre un microservicio MQTT en un cliente NestJS que funciona como un cliente MQTT que puede recibir y publicar mensajes.<br>
 
 ## Si copian el repositorio
+
 Tienen que ejecutar lo siguiente para que funcione correctamente en el estado actual en el que esta.
 <br>Tambien tiene que haber un servicio MQTT broker en la URL indicada en main.ts y app.module.ts<br>
 <br><b>Sin el MQTT broker corriendo en la url no va a funcionar, Yarn no va a poder desplegar el microservicio Nest MQTT<b><br>
@@ -38,11 +39,13 @@ $ yarn install
 ```
 
 ## MQTT Broker
+
 En mi caso estoy utilizando [Ecliple Mosquitto](https://mosquitto.org/).
 <br>Mosquitto se esta corriendo en mi entorno WLS(linux) en Ubuntu como si fuera otro dispositivo en la red local utilizando el puerto 1883 para la telemetria de mensajes. <br>
 <br>Esto puede ser cualquier dispositivo corriendo linux en la red local pero puede ser <br>
 
 [Para instrucciones para instalar WSL](https://learn.microsoft.com/es-mx/windows/wsl/install)
+
 <br> Asegurarse de instalar ubuntu(esta por defecto con ubuntu) porque el proceso con Debian es mas complicado <br>
 
 ```bash
