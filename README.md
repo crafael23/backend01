@@ -33,13 +33,13 @@ Tienen que ejecutar lo siguiente para que funcione correctamente en el estado ac
 <br>Tambien tiene que haber un servicio MQTT broker en la URL indicada en main.ts y app.module.ts<br>
 <br><b>Sin el MQTT broker corriendo en la url no va a funcionar, Yarn no va a poder desplegar el microservicio Nest MQTT</b><br>
 
+## Instalar Dependencias
+
 ```bash
-# yarn install para instalar todas las dependencias necesarias.
 $ yarn install
 ```
 
 ## MQTT Broker
-
 
 En mi caso estoy utilizando [Ecliple Mosquitto](https://mosquitto.org/).
 <br>Mosquitto se esta corriendo en mi entorno WLS(linux) en Ubuntu como si fuera otro dispositivo en la red local utilizando el puerto 1883 para la telemetria de mensajes. <br>
@@ -47,7 +47,7 @@ En mi caso estoy utilizando [Ecliple Mosquitto](https://mosquitto.org/).
 [Para instrucciones para instalar WSL](https://learn.microsoft.com/es-mx/windows/wsl/install)
 <br> Asegurarse de instalar ubuntu(esta por defecto con ubuntu) porque el proceso con Debian es mas complicado <br>
 
-
+# En la terminal de la Ubuntu
 ```bash
 # Para instalar mosquitto
 $ commando(s) para instalar mosquitto
@@ -61,6 +61,16 @@ $ sudo systemctl status mosquitto
 # Tambien para especificar que escuche en el puerto indicado
 # Generalmente ya esta  Seteado para que utilize el puerto 1883
 
+$ sudo nano /etc/mosquitto/conf.d/default.conf
+
+# Esto va a abrir el editor de texto para agregar las lineas que necesitamos agregar.
+```
+Una vez hecho esto ya deberia estar listo el entorno para inicializar la app de nest.
+
+```bash
+$ yarn start:dev # (Para que cualquier cambio que hagamos se este actualizando automaticamente mientras corre)
+# o alternativamente
+$ yarn start #Solo lo corre asi nada mas.
 ```
 
 ## Descripcion y explicacion
