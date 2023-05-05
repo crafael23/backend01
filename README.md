@@ -39,10 +39,9 @@ por medio del @MessagePattern('Topic') que escucha el mensaje que esta en el 'To
 Adentro del controlador se puede ejecutar codigo en especifico determinado en app.service.ts utilizando la siguiente nomenclatura: this.appService.Nombredelafuncion(); Y la razon por la cual es posible hacer eso
 por medio del app.service.ts es porque
 
-
+```
 ## Running the app
-
-
+```bash
 # development
 $ yarn run start
 
