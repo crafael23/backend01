@@ -24,7 +24,8 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript project.
+Esta app corre un microservicio MQTT en un cliente NestJS que funciona como un cliente MQTT que puede recibir y publicar mensajes.
 
 ## Si copian el repo
 ```bash
@@ -35,7 +36,6 @@ $ yarn install
 ## Descripcion e instrucciones de inicializacion
 ```typescript
 # Descripcion
-Esta app corre un microservicio MQTT en un cliente NestJS que funciona como un cliente MQTT que puede recibir y publicar mensajes.
 ```
 ## Running the app
 ```bash
