@@ -29,11 +29,8 @@
 
 ## Si copian el repositorio
 Tienen que ejecutar lo siguiente para que funcione correctamente en el estado actual en el que esta.
-
 <br>Tambien tiene que haber un servicio MQTT broker en la URL indicada en main.ts y app.module.ts<br>
-
 <br><b>Sin el MQTT broker corriendo en la url no va a funcionar, Yarn no va a poder desplegar el microservicio Nest MQTT<b><br>
-
 ```bash
 # yarn install para instalar todas las dependencias necesarias.
 $ yarn install
