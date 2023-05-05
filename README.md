@@ -31,13 +31,16 @@
 # yarn install para instalar todas las dependencias necesarias.
 $ yarn install
 ```
+
 ## Descripcion e instrucciones de inicializacion
-```bash
+```typescript
+asdfajdlkgjkgjgkg
+
+
+
+
 # Descripcion
-Este repositorio implementa un microservicio MQTT en el que se escuchan mensajes publicados por otros clientes en topicos determinados dentro del app.controller.ts 
-por medio del @MessagePattern('Topic') que escucha el mensaje que esta en el 'Topic'  establecido y ejecuta el codigo que se le determina dentro de la funcion a correr cuando ese mensaje es recibido.
-Adentro del controlador se puede ejecutar codigo en especifico determinado en app.service.ts utilizando la siguiente nomenclatura: this.appService.Nombredelafuncion(); Y la razon por la cual es posible hacer eso
-por medio del app.service.ts es porque
+
 
 ```
 ## Running the app
