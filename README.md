@@ -47,7 +47,8 @@ En mi caso estoy utilizando [Ecliple Mosquitto](https://mosquitto.org/).
 [Para instrucciones para instalar WSL](https://learn.microsoft.com/es-mx/windows/wsl/install)
 <br> Asegurarse de instalar ubuntu(esta por defecto con ubuntu) porque el proceso con Debian es mas complicado <br>
 
-# En la terminal de la Ubuntu
+# En la terminal de Ubuntu
+
 ```bash
 # Para instalar mosquitto
 $ commando(s) para instalar mosquitto
@@ -72,6 +73,7 @@ $ yarn start:dev # (Para que cualquier cambio que hagamos se este actualizando a
 # o alternativamente
 $ yarn start #Solo lo corre asi nada mas.
 ```
+Aqui debio de haberse inicializado el Microervicio MQTT correctamente y ya con eso podemos empezar a probar cambiando el codigo para recibir diferentes topicos y mensajes y ejecutar diferentes acciones.
 
 ## Descripcion y explicacion
 ```typescript
