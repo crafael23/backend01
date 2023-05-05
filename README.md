@@ -27,15 +27,20 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript project.
 <br>Esta app corre un microservicio MQTT en un cliente NestJS que funciona como un cliente MQTT que puede recibir y publicar mensajes.<br>
 
-## Si copian el repo
+## Si copian el repositorio
+Tienen que ejecutar lo siguiente para que funcione correctamente en el estado actual en el que esta.
+<br>Tambien tiene que haber un servicio MQTT broker en la URL indicada en main.ts y app.module.ts<br>
+<br><b>Sin el MQTT broker corriendo en la url no va a funcionar, nest no va a poder desplegar el microservicio MQTT<b><br>
 ```bash
 # yarn install para instalar todas las dependencias necesarias.
 $ yarn install
 ```
 
-## Descripcion e instrucciones de inicializacion
+## Descripcion y explicacion
 ```typescript
 # Descripcion
+
+
 ```
 ## Running the app
 ```bash
