@@ -81,22 +81,3 @@ Aqui debio de haberse inicializado el Microervicio MQTT correctamente y ya con e
 
 
 ```
-## Running the app
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-
-```
-## Agregar dependencias necesarias para la implememntacion mqtt si empiezan de cero
-```bash
-# microservices
-$ yarn add @nestjs/microservices
-# mqtt
-$ yarn add mqtt
-```
