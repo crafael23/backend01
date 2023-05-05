@@ -28,7 +28,7 @@
 
 ## Si copian el repo
 ```bash
-# yarn install
+# yarn install para instalar todas las dependencias necesarias.
 $ yarn install
 ```
 ## Descripcion e instrucciones de inicializacion
@@ -42,7 +42,7 @@ por medio del app.service.ts es porque
 
 ## Running the app
 
-```bash
+
 # development
 $ yarn run start
 
