@@ -26,9 +26,9 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
-
+## Si copian el repo
 ```bash
+#yarn install
 $ yarn install
 ```
 
@@ -45,9 +45,10 @@ $ yarn run start:dev
 $ yarn run start:prod
 
 ```
-## Agregar dependencias necesarias para la implememntacion mqtt
-
+## Agregar dependencias necesarias para la implememntacion mqtt si empiezan de cero
+```bash
+# microservices
 $ yarn add @nestjs/microservices
+# mqtt
 $ yarn add mqtt
-
 ```
