@@ -43,20 +43,33 @@ $ yarn install
 
 En mi caso estoy utilizando [Ecliple Mosquitto](https://mosquitto.org/).
 <br>Mosquitto se esta corriendo en mi entorno WLS(linux) en Ubuntu como si fuera otro dispositivo en la red local utilizando el puerto 1883 para la telemetria de mensajes. <br>
-<br>Esto puede ser cualquier dispositivo corriendo linux en la red local pero puede ser <br>
+<br>Esto puede ser cualquier dispositivo corriendo linux en la red local <br>
 [Para instrucciones para instalar WSL](https://learn.microsoft.com/es-mx/windows/wsl/install)
 <br> Asegurarse de instalar ubuntu(esta por defecto con ubuntu) porque el proceso con Debian es mas complicado <br>
 
 # En la terminal de Ubuntu
 
+Asegurarse que ubuntu este actualizado
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+
 ```bash
 # Para instalar mosquitto
-$ commando(s) para instalar mosquitto
+$ sudo apt-get install mosquitto
 
 # Para confirmar que el servicio esta corriendo.
 $ sudo systemctl status mosquitto
 
-# En el output de este commando deberia de haber algo que diga que esta Activo en verde.
+# En el output de este commando deberia de salir algo asi.
+
+$ ● mosquitto.service - Mosquitto MQTT Broker
+$     Loaded: loaded (/lib/systemd/system/mosquitto.service; enabled; vendor preset: enabled)
+$     Active: active (running) since Sat 2023-05-06 19:32:20 CST; 24s ago
+$       Docs: man:mosquitto.conf(5)
+$             man:mosquitto(8)
 
 # Ahora hay que cambiar la configuracion de Mosquitto para que acepte mensajes anonimos 
 # Tambien para especificar que escuche en el puerto indicado
@@ -65,6 +78,17 @@ $ sudo systemctl status mosquitto
 $ sudo nano /etc/mosquitto/conf.d/default.conf
 
 # Esto va a abrir el editor de texto para agregar las lineas que necesitamos agregar.
+#ahora simplemente editar el archivo agregando los siguientes argumentos
+
+$ listener 1883
+$ protocol mqtt
+$ allow_anonymous true
+
+
+# Una vez este ya editado hay que reiniciar el servicio
+
+$ sudo systemctl restart mosquitto.service
+
 ```
 Una vez hecho esto ya deberia estar listo el entorno para inicializar la app de nest.
 
