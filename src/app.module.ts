@@ -12,12 +12,12 @@ import { ClientsModule , Transport } from '@nestjs/microservices';
       {
         name: 'TEST_CLIENT',
         transport: Transport.MQTT,
-        options: {           // ? En  app.module.ts  se configura el cliente MQTT, en este caso se llama TEST_CLIENT(podemos cambiar el nombre a lo que sea)
+        options: {
           subscribeOptions: {qos: 1},
           url: 'mqtt://localhost:1883',
         }
       },
-    ]),                     // TODO: ver los commentarios de app.controller.ts
+    ]),
   ],
   controllers: [AppController],
   providers: [AppService],

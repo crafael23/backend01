@@ -11,22 +11,22 @@ export class AppController {
     private readonly appService: AppService,
     ) { }
 
-// El  Message pattern determina el topico al que se va a suscribir el cliente MQTT.
 
-//  Aqui se definen los metodos que se van a usar en el microservicio en base al topico que se mande desde el cliente MQTT que publica los mensajes
   @MessagePattern('ftf-input')
-  sumData(@Payload() payload: number[] , @Ctx() context: MqttContext){ // esto ordena los datos que se reciben en el payload y el contexto
+  sumData(@Payload() payload: number[] , @Ctx() context: MqttContext){
     console.log(`___New message ${context.getTopic()}___`);
     console.log("Payload: ", payload);
     console.log("Packet: ", context.getPacket());
-    this.appService.sumDataService(payload); //esto manda el payload(mensaje) hacia el servicio(funcion) que se creo en app.service.ts (ahora ver comentarios en app.service.ts)
+    this.appService.sumDataService(payload);
   }
   
-  @MessagePattern('ftf-output') //como en app.service.ts se manda el mensaje al topico ftf-output, aqui se recibe el mensaje
+  @MessagePattern('ftf-output')
   logData(@Payload() payload: string, @Ctx() context: MqttContext): string {
-    console.log(`___New message ${context.getTopic()}___`); //esto imprime en consola el topico del mensaje
+    console.log(`___New message ${context.getTopic()}___`);
     console.log("Payload: ", payload); 
     console.log("Packet: ", context.getPacket());
-    return payload+ `response from logdata() in -t ${context.getTopic()}`; //esto regresa el mensaje que se recibio
+    return payload+ `response from logdata() in -t ${context.getTopic()}`;
   }
+  
 }
+
