@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller } from '@nestjs/common';
 import { AppService } from './app.service';
 
 //  Agregar los importes enmedio de estos comentarios
@@ -14,19 +14,10 @@ export class AppController {
 
   @MessagePattern('ftf-input')
   sumData(@Payload() payload: number[] , @Ctx() context: MqttContext){
-    console.log(`___New message ${context.getTopic()}___`);
+    console.log(`___New message ${context.getTopic()}____`);
     console.log("Payload: ", payload);
     console.log("Packet: ", context.getPacket());
-    this.appService.sumDataService(payload);
+    //this.appService.sumDataService(payload);
   }
-  
-  @MessagePattern('ftf-output')
-  logData(@Payload() payload: string, @Ctx() context: MqttContext): string {
-    console.log(`___New message ${context.getTopic()}___`);
-    console.log("Payload: ", payload); 
-    console.log("Packet: ", context.getPacket());
-    return payload+ `response from logdata() in -t ${context.getTopic()}`;
-  }
-  
 }
 
