@@ -12,7 +12,7 @@ export class AppController {
     ) { }
 
 
-  @MessagePattern('ftf-input')
+  @MessagePattern('modulo1/sensores/#')
   sumData(@Payload() payload: number[] , @Ctx() context: MqttContext){
     console.log(`___New message ${context.getTopic()}____`);
     console.log("Payload: ", payload);
