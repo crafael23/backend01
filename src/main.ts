@@ -9,7 +9,6 @@ import { MicroserviceOptions , Transport } from '@nestjs/microservices';
 
 //  Agregar los importes enmedio de estos comentarios
 
-
 async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
     transport: Transport.MQTT,
@@ -21,3 +20,4 @@ async function bootstrap() {
   app.listen();
 }
 bootstrap();
+
