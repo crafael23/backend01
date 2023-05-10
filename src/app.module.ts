@@ -6,12 +6,11 @@ import { AppService } from './app.service';
 import { ClientsModule , Transport } from '@nestjs/microservices';
 //  Agregar los importes enmedio de estos comentarios
 
-
 @Module({
   imports: [
     ClientsModule.register([
       {
-        name: 'TEST_CLIENT',
+        name: 'Cliente_NestJS',
         transport: Transport.MQTT,
         options: {
           subscribeOptions: {qos: 1},

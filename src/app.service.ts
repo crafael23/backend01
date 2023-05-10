@@ -7,18 +7,10 @@ import { ClientProxy , MqttRecordBuilder } from '@nestjs/microservices';
 @Injectable()
 export class AppService {
   constructor(
-    @Inject('TEST_CLIENT') private client: ClientProxy,
+    @Inject('Cliente_NestJS') private client: ClientProxy,
     ) { }
 
-    sumDataService(payload:number[]){
-      const response= payload.reduce(( a , b) => a + b , 0 );
-      const record= new MqttRecordBuilder(`${response}`)
-        .setQoS(1)
-        .build();
-      
-      this.client.send('ftf-output', record).subscribe(res=>{
-        console.log('Response output: <', res, '>');
-      });
+    Funcion_que_que_va_a_hacer_algo(payload:[]){//this is a placeholder fuction that will be injected where needed to do something in specific
     }
 
     
